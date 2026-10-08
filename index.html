@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>灿灿作品集 · 冯灿</title>
+<meta name="description" content="冯灿的个人作品集：00后影像创作者，拍摄、剪辑、摄像，用镜头记录我脑中的世界。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Crect x='14' y='20' width='36' height='26' rx='5' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='32' cy='33' r='8' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Crect x='24' y='17' width='6' height='4' rx='1' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--bg-dark:#000;--bg-light:#fff;--bg-gray:#f5f5f7;--text-primary:#1d1d1f;--text-secondary:#6e6e73;--text-on-dark:#f5f5f7;--text-dim-dark:#86868b;--accent:#0071e3;--accent-hover:#0077ed;--border:#d2d2d7;--nav-h:48px;--content-max:1180px;--radius-lg:20px;--radius-md:14px;--ease:cubic-bezier(.25,.1,.25,1);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text-primary);background:var(--bg-light);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:var(--content-max);margin:0 auto;padding:0 28px;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;background:rgba(0,0,0,.28);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);transition:background .4s var(--ease);}
+.nav.scrolled{background:rgba(255,255,255,.78);box-shadow:0 1px 0 rgba(0,0,0,.06);}
+.nav-inner{width:100%;max-width:var(--content-max);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-size:17px;font-weight:600;letter-spacing:-.01em;color:#fff;transition:color .3s;}
+.nav.scrolled .nav-brand{color:var(--text-primary);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:14px;font-weight:400;color:rgba(255,255,255,.85);transition:color .3s;position:relative;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:currentColor;transition:width .3s var(--ease);}
+.nav-links a:hover::after{width:100%;}
+.nav.scrolled .nav-links a{color:var(--text-secondary);}
+.nav.scrolled .nav-links a:hover{color:var(--text-primary);}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+.nav-burger span{display:block;width:20px;height:1.5px;background:#fff;margin:5px 0;transition:transform .3s,opacity .3s,background .3s;}
+.nav.scrolled .nav-burger span{background:var(--text-primary);}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-burger.open span:nth-child(2){opacity:0;}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.hero{min-height:100svh;background:var(--bg-dark);color:var(--text-on-dark);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 600px at 78% 18%, rgba(255,255,255,.05), transparent 60%),radial-gradient(900px 500px at 12% 85%, rgba(255,255,255,.04), transparent 60%);}
+.hero-inner{position:relative;z-index:1;max-width:var(--content-max);margin:0 auto;padding:0 28px;width:100%;}
+.hero-kicker{font-size:14px;font-weight:500;letter-spacing:.14em;color:var(--text-dim-dark);text-transform:uppercase;margin-bottom:24px;}
+.hero-title{font-size:clamp(44px,7.5vw,84px);font-weight:700;letter-spacing:-.025em;line-height:1.06;margin-bottom:20px;}
+.hero-name{color:#fff;position:relative;}
+.hero-name::after{content:"";position:absolute;left:0;bottom:6px;height:14px;width:100%;background:rgba(0,113,227,.35);z-index:-1;border-radius:2px;}
+.hero-subtitle{font-size:clamp(17px,2vw,21px);color:var(--text-dim-dark);max-width:640px;margin-bottom:40px;font-weight:400;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:52px;}
+.tag{font-size:13px;font-weight:400;color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.28);padding:7px 18px;border-radius:980px;transition:border-color .3s,background .3s;}
+.tag:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;font-size:16px;font-weight:500;padding:12px 30px;border-radius:980px;transition:transform .25s var(--ease),background .25s var(--ease),box-shadow .25s var(--ease);cursor:pointer;border:none;}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:var(--accent-hover);}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;}
+.btn-ghost:hover{background:rgba(255,255,255,.2);}
+.hero-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);color:var(--text-dim-dark);font-size:12px;letter-spacing:.1em;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:1;}
+.hero-scroll svg{animation:float 2.4s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+.section{padding:clamp(90px,12vw,150px) 0;}
+.section-light{background:var(--bg-light);}
+.section-dark{background:var(--bg-dark);color:var(--text-on-dark);}
+.section-head{margin-bottom:clamp(48px,7vw,80px);}
+.section-eyebrow{font-size:14px;font-weight:500;letter-spacing:.12em;color:var(--accent);margin-bottom:14px;}
+.section-dark .section-eyebrow{color:#2997ff;}
+.section-title{font-size:clamp(32px,4.5vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px;}
+.section-desc{font-size:clamp(16px,1.8vw,19px);color:var(--text-secondary);max-width:620px;}
+.section-dark .section-desc{color:var(--text-dim-dark);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.visible{opacity:1;transform:none;}
+.work-group{margin-bottom:clamp(64px,9vw,96px);}
+.work-group:last-child{margin-bottom:0;}
+.work-group-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:28px;border-bottom:1px solid var(--border);padding-bottom:18px;}
+.work-group-title{font-size:clamp(20px,2.4vw,26px);font-weight:600;letter-spacing:-.01em;}
+.work-group-note{font-size:14px;color:var(--text-secondary);}
+.grid-video{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+.grid-photo{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+.work-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:transform .45s var(--ease),box-shadow .45s var(--ease);}
+.work-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.14);}
+.work-media{position:relative;overflow:hidden;background:#0a0a0a;}
+.work-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease),filter .7s var(--ease);}
+.work-card:hover .work-media img{transform:scale(1.04);}
+.work-media.video img{aspect-ratio:16/9;}
+.work-media.photo img{aspect-ratio:3/4;}
+.work-media::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.18) 100%);opacity:0;transition:opacity .45s var(--ease);}
+.work-card:hover .work-media::after{opacity:1;}
+.play-btn{position:absolute;left:50%;top:50%;z-index:3;transform:translate(-50%,-50%) scale(.9);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.42);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .35s var(--ease),transform .35s var(--ease);border:1px solid rgba(255,255,255,.35);cursor:pointer;}
+.work-card:hover .play-btn{opacity:1;transform:translate(-50%,-50%) scale(1);}
+.play-btn svg{margin-left:3px;}
+.work-info{padding:20px 22px 24px;}
+.work-info h4{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px;}
+.work-info p{font-size:14px;color:var(--text-secondary);line-height:1.5;}
+.about-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(40px,6vw,90px);align-items:start;}
+.about-lead{font-size:clamp(20px,2.4vw,26px);font-weight:600;line-height:1.55;letter-spacing:-.01em;margin-bottom:26px;color:#fff;}
+.about-text p{font-size:16px;color:var(--text-dim-dark);margin-bottom:18px;line-height:1.75;}
+.about-text p:last-child{margin-bottom:0;}
+.about-side{display:flex;flex-direction:column;gap:44px;}
+.about-block h3{font-size:14px;font-weight:600;letter-spacing:.1em;color:var(--text-dim-dark);margin-bottom:18px;text-transform:uppercase;}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:10px;}
+.tag-outline{font-size:13px;color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.28);padding:7px 16px;border-radius:980px;transition:border-color .3s,background .3s;}
+.tag-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.timeline{display:flex;flex-direction:column;}
+.timeline-item{display:grid;grid-template-columns:150px 26px 1fr;}
+.timeline-item:not(:last-child)::after{content:"";position:absolute;left:calc(150px + 13px - 1px);top:22px;bottom:-16px;width:2px;background:rgba(255,255,255,.14);}
+.timeline-item{position:relative;}
+.timeline-time{font-size:13px;font-weight:500;color:var(--text-dim-dark);padding-top:4px;white-space:nowrap;}
+.timeline-mid{display:flex;justify-content:center;}
+.timeline-dot{width:10px;height:10px;border-radius:50%;background:#2997ff;margin-top:8px;z-index:1;box-shadow:0 0 0 4px rgba(41,151,255,.15);}
+.timeline-body{padding-bottom:36px;}
+.timeline-item:last-child .timeline-body{padding-bottom:0;}
+.timeline-body h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:4px;}
+.timeline-body p{font-size:14px;color:var(--text-dim-dark);line-height:1.6;}
+.timeline-quote{margin-top:10px;font-size:15px;color:rgba(255,255,255,.75);font-style:italic;line-height:1.7;border-left:2px solid rgba(255,255,255,.2);padding-left:16px;}
+.footer{background:var(--bg-dark);color:var(--text-on-dark);padding:76px 0 40px;}
+.footer-inner{max-width:var(--content-max);margin:0 auto;padding:0 28px;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:60px;}
+.footer-brand{font-size:22px;font-weight:700;letter-spacing:-.02em;}
+.footer-desc{font-size:14px;color:var(--text-dim-dark);margin-top:8px;max-width:340px;line-height:1.6;}
+.footer-contact{display:flex;flex-direction:column;gap:14px;min-width:220px;}
+.footer-contact a{font-size:15px;color:var(--text-dim-dark);display:flex;align-items:center;gap:12px;transition:color .3s;}
+.footer-contact a:hover{color:#fff;}
+.footer-contact svg{flex:none;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--text-dim-dark);}
+.toast{position:fixed;left:50%;bottom:40px;transform:translate(-50%,16px);background:rgba(29,29,31,.94);color:#fff;font-size:14px;padding:12px 24px;border-radius:980px;box-shadow:0 8px 28px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease);z-index:300;white-space:nowrap;max-width:90vw;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");background-size:240px 240px;opacity:.045;mix-blend-mode:overlay;}
+.work-major{margin-bottom:clamp(72px,10vw,110px);}
+.work-major:last-child{margin-bottom:0;}
+.work-major-head{display:flex;align-items:baseline;gap:22px;border-bottom:2px solid var(--text-primary);padding-bottom:20px;margin-bottom:clamp(40px,6vw,56px);}
+.work-major-index{font-size:clamp(34px,4.5vw,52px);font-weight:700;letter-spacing:-.03em;color:#e3e3e8;line-height:1;}
+.work-major-title{font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-.02em;line-height:1.1;}
+.work-major-desc{font-size:15px;color:var(--text-secondary);margin-top:6px;}
+.work-sub{margin-bottom:clamp(48px,7vw,72px);}
+.work-sub:last-child{margin-bottom:0;}
+.series-block{margin-bottom:clamp(36px,5vw,52px);}
+.series-block:last-child{margin-bottom:0;}
+.series-title{font-size:14px;font-weight:600;color:var(--text-secondary);letter-spacing:.08em;margin-bottom:18px;}
+.grid-series{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.work-media video{position:relative;z-index:0;width:100%;height:100%;display:block;object-fit:cover;background:#0a0a0a;aspect-ratio:3/4;transition:transform .7s var(--ease);}
+.work-card:hover .work-media video{transform:scale(1.03);}
+.work-media video{pointer-events:auto;}
+.finale{background:var(--bg-dark);color:var(--text-on-dark);padding:clamp(110px,16vw,190px) 0;text-align:center;position:relative;overflow:hidden;}
+.finale::before{content:"";position:absolute;inset:0;background:radial-gradient(1000px 500px at 50% 0%, rgba(255,255,255,.06), transparent 65%);}
+.finale-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 28px;}
+.finale-title{font-size:clamp(32px,5.5vw,58px);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-bottom:28px;}
+.finale-text{font-size:clamp(16px,2.2vw,20px);color:var(--text-dim-dark);line-height:1.8;margin-bottom:10px;}
+.finale-sign{margin-top:44px;font-size:15px;font-weight:500;color:#fff;letter-spacing:.12em;}
+@media (max-width:768px){.container{padding:0 20px;}.nav-inner{padding:0 20px;}.nav-links{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:0;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);padding:8px 28px 16px;display:none;box-shadow:0 12px 32px rgba(0,0,0,.12);}.nav-links.open{display:flex;}.nav-links a{color:var(--text-primary)!important;display:block;padding:13px 0;font-size:17px;border-bottom:1px solid #eee;}.nav-links li:last-child a{border-bottom:none;}.nav-burger{display:block;}.grid-video,.grid-photo{grid-template-columns:1fr;}.grid-series{grid-template-columns:1fr;gap:20px;}.work-major-head{flex-direction:column;align-items:flex-start;gap:6px;}.about-grid{grid-template-columns:1fr;gap:48px;}.footer-top{flex-direction:column;gap:32px;}.hero-scroll{display:none;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{opacity:1;transform:none;transition:none;}*{animation:none!important;}}
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">灿灿作品集</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#work">作品</a></li>
+        <li><a href="#about">关于</a></li>
+      </ul>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <p class="hero-kicker">冯灿 PORTFOLIO</p>
+    <h1 class="hero-title">你好，我是<br><span class="hero-name">冯灿</span></h1>
+    <p class="hero-subtitle">00 后，当过两年兵。做拍摄、剪辑、摄像，擅长用镜头记录我脑中的世界。</p>
+    <div class="hero-tags">
+      <span class="tag">拍摄</span>
+      <span class="tag">摄像</span>
+      <span class="tag">剪辑</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">查看作品</a>
+      <a href="#about" class="btn btn-ghost">关于我</a>
+    </div>
+  </div>
+  <a href="#work" class="hero-scroll" aria-label="向下滚动查看作品">
+    <span>向下滚动</span>
+    <svg width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true"><path d="M1 4l6 6 6-6M1 10l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+  </a>
+</section>
+<section class="section section-light" id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">PORTFOLIO</p>
+      <h2 class="section-title">精选作品</h2>
+      <p class="section-desc">用镜头记录我脑中的世界——摄像与摄影，两大方向。</p>
+    </div>
+    <div class="work-major reveal">
+      <div class="work-major-head">
+        <span class="work-major-index">01</span>
+        <div>
+          <h3 class="work-major-title">摄像 · VLOG</h3>
+          <p class="work-major-desc">健身教学与生活记录——用动态影像讲故事。</p>
+        </div>
+      </div>
+      <div class="work-sub reveal">
+        <div class="work-group-head">
+          <h4 class="work-group-title">健身教学</h4>
+          <p class="work-group-note">2 部</p>
+        </div>
+        <div class="grid-video">
+          <figure class="work-card">
+            <div class="work-media video">
+              <video src="assets/videos/fitness-01.mp4" controls preload="metadata" playsinline></video>
+              <span class="play-btn" role="button" tabindex="0" aria-label="播放健身教学 一">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </figure>
+          <figure class="work-card">
+            <div class="work-media video">
+              <video src="assets/videos/fitness-02.mp4" controls preload="metadata" playsinline></video>
+              <span class="play-btn" role="button" tabindex="0" aria-label="播放健身教学 二">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <div class="work-sub reveal">
+        <div class="work-group-head">
+          <h4 class="work-group-title">生活 VLOG</h4>
+          <p class="work-group-note">4 部</p>
+        </div>
+        <div class="grid-video">
+          <figure class="work-card">
+            <div class="work-media video">
+              <video src="assets/videos/vlog-01.mp4" controls preload="metadata" playsinline></video>
+              <span class="play-btn" role="button" tabindex="0" aria-label="播放生活 VLOG 一">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </figure>
+          <figure class="work-card">
+            <div class="work-media video">
+              <video src="assets/videos/vlog-02.mp4" controls preload="metadata" playsinline></video>
+              <span class="play-btn" role="button" tabindex="0" aria-label="播放生活 VLOG 二">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </figure>
+          <figure class="work-card">
+            <div class="work-media video">
+              <video src="assets/videos/vlog-03.mp4" controls preload="metadata" playsinline></video>
+              <span class="play-btn" role="button" tabindex="0" aria-label="播放生活 VLOG 三">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </figure>
+          <figure class="work-card">
+            <div class="work-media video">
+              <video src="assets/videos/vlog-04.mp4" controls preload="metadata" playsinline></video>
+              <span class="play-btn" role="button" tabindex="0" aria-label="播放生活 VLOG 四">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="work-major reveal">
+      <div class="work-major-head">
+        <span class="work-major-index">02</span>
+        <div>
+          <h3 class="work-major-title">摄影</h3>
+          <p class="work-major-desc">人像与建筑——用静态画面定格情绪与空间。</p>
+        </div>
+      </div>
+      <div class="work-sub reveal">
+        <div class="work-group-head">
+          <h4 class="work-group-title">人像</h4>
+          <p class="work-group-note">5 组 · 精选 15 张</p>
+        </div>
+        <div class="series-block">
+          <h5 class="series-title">日系夜景少女</h5>
+          <div class="grid-series">
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-1/portrait-1-01.jpg" alt="日系夜景少女 01"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-1/portrait-1-02.jpg" alt="日系夜景少女 02"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-1/portrait-1-03.jpg" alt="日系夜景少女 03"></div></figure>
+          </div>
+        </div>
+        <div class="series-block">
+          <h5 class="series-title">中式雅典女孩</h5>
+          <div class="grid-series">
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-2/portrait-2-01.jpg" alt="中式雅典女孩 01"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-2/portrait-2-02.jpg" alt="中式雅典女孩 02"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-2/portrait-2-03.jpg" alt="中式雅典女孩 03"></div></figure>
+          </div>
+        </div>
+        <div class="series-block">
+          <h5 class="series-title">日系女孩</h5>
+          <div class="grid-series">
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-3/portrait-3-01.jpg" alt="日系女孩 01"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-3/portrait-3-02.jpg" alt="日系女孩 02"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-3/portrait-3-03.jpg" alt="日系女孩 03"></div></figure>
+          </div>
+        </div>
+        <div class="series-block">
+          <h5 class="series-title">氛围感</h5>
+          <div class="grid-series">
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-4/portrait-4-01.jpg" alt="氛围感人像 01"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-4/portrait-4-02.jpg" alt="氛围感人像 02"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-4/portrait-4-03.jpg" alt="氛围感人像 03"></div></figure>
+          </div>
+        </div>
+        <div class="series-block">
+          <h5 class="series-title">日常感女孩</h5>
+          <div class="grid-series">
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-5/portrait-5-01.jpg" alt="日常感女孩 01"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-5/portrait-5-02.jpg" alt="日常感女孩 02"></div></figure>
+            <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/portrait-5/portrait-5-03.jpg" alt="日常感女孩 03"></div></figure>
+          </div>
+        </div>
+      </div>
+      <div class="work-sub reveal">
+        <div class="work-group-head">
+          <h4 class="work-group-title">建筑</h4>
+          <p class="work-group-note">精选 6 张</p>
+        </div>
+        <div class="grid-photo">
+          <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/architecture/architecture-01.jpg" alt="建筑摄影 01"></div></figure>
+          <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/architecture/architecture-02.jpg" alt="建筑摄影 02"></div></figure>
+          <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/architecture/architecture-03.jpg" alt="建筑摄影 03"></div></figure>
+          <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/architecture/architecture-04.jpg" alt="建筑摄影 04"></div></figure>
+          <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/architecture/architecture-05.jpg" alt="建筑摄影 05"></div></figure>
+          <figure class="work-card"><div class="work-media photo"><img loading="lazy" decoding="async" src="assets/photos/architecture/architecture-06.jpg" alt="建筑摄影 06"></div></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-dark" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-eyebrow">ABOUT</p>
+      <h2 class="section-title">关于我</h2>
+      <p class="section-desc">性格与经历，决定了我镜头里的世界。</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="about-lead">摄影于我不是手艺，是记录故事的方式。</p>
+        <p>从相机到剪辑台一个人走完：会布光、会构图、会把一个产品拍出它该有的情绪。</p>
+        <p>不爱只按快门，更想把脑子里那个画面变成能卖货的图和视频。如果你也有想被好好记录的产品或故事，欢迎找我聊聊。</p>
+      </div>
+      <div class="about-side">
+        <div class="about-block reveal">
+          <h3>我的性格</h3>
+          <div class="tag-cloud">
+            <span class="tag-outline">慢热真诚</span>
+            <span class="tag-outline">专注细节</span>
+            <span class="tag-outline">不拒绝新的事物</span>
+          </div>
+        </div>
+        <div class="about-block reveal">
+          <h3>我的经历</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">2020 — 2022</div>
+              <div class="timeline-mid"><span class="timeline-dot"></span></div>
+              <div class="timeline-body">
+                <h4>服役于广东武警机动支队</h4>
+                <p>两年兵，摔打过，拿过支队比武综合成绩第二。教会我一件事：交代的事，给我结果。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">2022.10 — 至今</div>
+              <div class="timeline-mid"><span class="timeline-dot"></span></div>
+              <div class="timeline-body">
+                <h4>米朵儿童摄影</h4>
+                <p>从按快门到选片、剪辑、出片，一个人走完全程。拍过孩子的笑，也拍过他们哭着被妈妈拽走的瞬间。镜头磨人，但也教会我——好照片不是拍出来的，是等出来、用光雕出来的。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">现在 — 未来</div>
+              <div class="timeline-mid"><span class="timeline-dot"></span></div>
+              <div class="timeline-body">
+                <h4>对生活还在兴奋期</h4>
+                <p>死磕摄影，也在死磕 AI。相机是旧工具，AI 是新武器，我都要。</p>
+              </div>
+            </div>
+          </div>
+          <p class="timeline-quote">"我不急着成为谁，我只想下次见你时，比这次好一点。"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="finale">
+  <div class="finale-inner reveal">
+    <h2 class="finale-title">谢谢你看到这里。</h2>
+    <p class="finale-text">我是冯灿。</p>
+    <p class="finale-text">现在的我还不够好，但我会一直记录下去，下次见面，给你看更好的我。</p>
+    <p class="finale-sign">—— 期待合作</p>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">灿灿作品集</div>
+        <p class="footer-desc">用镜头记录我脑中的世界。</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:gaigaigaimingle@qq.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+          gaigaigaimingle@qq.com
+        </a>
+        <a href="tel:18566991756">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          185-6699-1756
+        </a>
+        <a href="#" data-copy="FACA608917">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          FACA608917 · 点击复制
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 冯灿</span>
+      <span>拍摄 · 剪辑 · 摄像</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  var burger = document.getElementById('navBurger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  var toastEl, toastTimer;
+  function showToast(msg){
+    if(!toastEl){ toastEl = document.createElement('div'); toastEl.className = 'toast'; document.body.appendChild(toastEl); }
+    toastEl.textContent = msg;
+    requestAnimationFrame(function(){ toastEl.classList.add('show'); });
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+  document.querySelectorAll('.work-media.video').forEach(function(m){
+    var v = m.querySelector('video');
+    var btn = m.querySelector('.play-btn');
+    function play(){
+      if(!v || !v.paused) return;
+      var p = v.play();
+      if(p && p.then) p.then(function(){ if(btn) btn.style.display = 'none'; }).catch(function(){
+        v.muted = true;
+        var q = v.play();
+        if(q && q.then) q.then(function(){ v.muted = false; if(btn) btn.style.display = 'none'; }).catch(function(){});
+      });
+    }
+    function toggle(){
+      if(v.paused){ play(); } else { v.pause(); }
+    }
+    if(btn){
+      btn.addEventListener('click', function(e){ e.stopPropagation(); play(); });
+      btn.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); play(); }
+      });
+    }
+    m.addEventListener('click', function(e){
+      if(e.target === v || e.target === m || e.target === btn) toggle();
+    });
+    v.addEventListener('click', function(e){ e.stopPropagation(); toggle(); });
+    v.addEventListener('pause', function(){
+      if(v.ended && btn) btn.style.display = '';
+    });
+    v.addEventListener('loadedmetadata', function(){
+      var ratio = v.videoHeight > v.videoWidth ? '9/16' : '16/9';
+      m.style.aspectRatio = ratio;
+    });
+  });
+  function fallbackCopy(txt){
+    var ta = document.createElement('textarea');
+    ta.value = txt;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
+  }
+  document.querySelectorAll('a[data-copy]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var txt = a.getAttribute('data-copy');
+      function done(){ showToast('微信号已复制：' + txt); }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done, function(){ fallbackCopy(txt); done(); });
+      } else { fallbackCopy(txt); done(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
